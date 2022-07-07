@@ -13,33 +13,33 @@ public class Control2_ex2 {
 		char ch = sc.next().charAt(0);
 		if(num==1) {
 			ch=(char)(ch+num);
-			if(ch>=122) { System.out.println((char)(ch-26));}
+			if(ch>122) { System.out.println((char)(ch-26));}
 			else {System.out.println((char)ch);}
 		} 
 		
 		if (num==2) {
 			ch=(char)(ch+num);
-			if(ch>=122) { System.out.println((char)(ch-26));}
+			if(ch>122) { System.out.println((char)(ch-26));}
 			else {System.out.println((char)ch);
 		}}
 			
 			if (num==3) {
 			ch=(char)(ch+num);
-			if(ch>=122) { System.out.println((char)(ch-26));}
+			if(ch>122) { System.out.println((char)(ch-26));}
 			else {System.out.println((char)ch);
 	}} 
 			if(num==4) {
 		ch=(char)(ch+num);
-		if(ch>=122) { System.out.println((char)(ch-26));}
+		if(ch>122) { System.out.println((char)(ch-26));}
 		else {System.out.println((char)ch);
 	}} 
 			if(num==5) {
 		ch=(char)(ch+num);
-		if(ch>=122) { System.out.println((char)(ch-26));}
+		if(ch>122) { System.out.println((char)(ch-26));}
 		else {System.out.println((char)ch);
 	}}
 	
-	
+	//study edition
 	
 	}
 
