@@ -11,36 +11,26 @@ public class Control2_ex2 {
 		int num = sc.nextInt();
 		System.out.println("알파벳을 입력");
 		char ch = sc.next().charAt(0);
-		if(num==1) {
-			ch=(char)(ch+num);
-			if(ch>122) { System.out.println((char)(ch-26));}
-			else {System.out.println((char)ch);}
-		} 
 		
-		if (num==2) {
-			ch=(char)(ch+num);
-			if(ch>122) { System.out.println((char)(ch-26));}
-			else {System.out.println((char)ch);
-		}}
-			
-			if (num==3) {
-			ch=(char)(ch+num);
-			if(ch>122) { System.out.println((char)(ch-26));}
-			else {System.out.println((char)ch);
-	}} 
-			if(num==4) {
-		ch=(char)(ch+num);
-		if(ch>122) { System.out.println((char)(ch-26));}
-		else {System.out.println((char)ch);
-	}} 
-			if(num==5) {
-		ch=(char)(ch+num);
-		if(ch>122) { System.out.println((char)(ch-26));}
-		else {System.out.println((char)ch);
-	}}
-	
-	//study edition
+		int result = ch+num;
+		//소문자가 범위를 벗어났을때
+		if(result>'z') { 
+			result = result - 'z'-1;
+			result = 'a'+result;
+		}
+		//대문자가 범위를 벗어났을때
+		if(result>'Z'&&result<'a') { 
+			result = result - 'Z' -1;
+			result = result + 'A';
+		}
+		
+		ch = (char)result;
+		
+		System.out.println(ch);
 	
 	}
 
 }
+
+
+
