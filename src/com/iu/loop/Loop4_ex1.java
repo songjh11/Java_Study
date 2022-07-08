@@ -10,18 +10,26 @@ public class Loop4_ex1 {
 		//해당 시간에 종료
 
 		Scanner sc = new Scanner (System.in);
-				
-		for(int m=0; m<60; m++) {
-			int a = sc.nextInt();
-			for (a=0; )
-			System.out.print("현재 시간은"+m+"분");
-			
-			for (int s=0; s<60; s++) {
-				System.out.print("현재 시간은"+m+"분"+":"+s+"초");
-				} 
-				
-			}
+		System.out.println("분 입력");
+		int min = sc.nextInt();
+		System.out.println("초 입력");
+		int sec = sc.nextInt();
 		
+//		boolean flag = false;
+		
+		for(int m=0; m<60; m++) {
+			for (int s=0; s<60; s++) {
+				System.out.println(m+"분"+s+"초");
+			    if(min==m&&sec==s) {
+//			    	flag = !flag;
+			    	m=60;
+				break;
+			}
+			}
+//			if(flag) {	
+//			break;}
+			
+		}
 		}
 		
 	}

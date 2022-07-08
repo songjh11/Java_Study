@@ -26,22 +26,23 @@ public class T {
 //		if(yId==id&&yPw==pw) {
 //			System.out.println("로그인성공");
 //			} else {	
-		for(int i=0; i<=5; i++) {
-			System.out.println("아이디를 입력하세요");
-			int id=sc.nextInt();
-			System.out.println("패스워드를 입력하세요");
-			int pw=sc.nextInt();
-			if(yId==id&&yPw==pw) {
-				System.out.println("로그인성공");
-				break;
-				}else if (yId != id) {
-					System.out.println("로그인실패");
-			}else if (yPw != pw) {
-				System.out.println("로그인 실패");
-		}
-			
-		}
-		System.out.println("End");	
+//		for(int i=0; i<=5; i++) {
+//			System.out.println("아이디를 입력하세요");
+//			int id=sc.nextInt();
+//			System.out.println("패스워드를 입력하세요");
+//			int pw=sc.nextInt();
+//			if(yId==id&&yPw==pw) {
+//				System.out.println("로그인성공");
+//				break;
+//				}else if (yId != id) {
+//					System.out.println("로그인실패");
+//			}else if (yPw != pw) {
+//				System.out.println("로그인 실패");
+//		}
+//			
+//		}
+//		System.out.println("End");	
+		
 	}
 
 }
