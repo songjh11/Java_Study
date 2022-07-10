@@ -68,7 +68,7 @@ public class Loop4_ex2 {
 				inc=1;
 				sound="탕";
 			}
-			for(int b=0; b<=30;b=b+inc) {
+			for(int b=0; b<30;b=b+inc) {
 				System.out.println(sound);
 			}
 				
