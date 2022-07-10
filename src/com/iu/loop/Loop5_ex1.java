@@ -99,7 +99,7 @@ while(check) {
 	} else if(yId!=i||yPw!=p) {
 		System.out.println("로그인 실패");
 			} }
-	if(start = true) {
+	if(start == true) {
 		for(lv = 1; lv<=15; lv++) {
 			System.out.println("현재 레벨: "+lv);
 				if(lv%5==0) {
