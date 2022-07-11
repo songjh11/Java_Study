@@ -112,7 +112,7 @@ public class Array_ex3 {
 						break;						
 						}
 					}
-					if(flag) {
+					if(flag) {//이게 뭔뜻인지 모르겠다~~~~~~~~~
 					name2 = new String [name.length-1];
 					nums2 = new int [name2.length];
 					kor2 = new int [name2.length];
