@@ -52,21 +52,19 @@ public class Array_ex3 {
 				math = new int [name.length];
 				total = new int [name.length];
 				avg = new double [name.length];
-				System.out.println("학생 수 입력");
-				int num = sc.nextInt();
-				for(int i=0; i<name.length; i++) {
-					System.out.println("이름 입력");
-					name[i] = sc.next();
-					System.out.println("번호 입력");
-					nums[i] = sc.nextInt();
-					System.out.println("국어 점수 입력");
-					kor[i] = sc.nextInt();
-					System.out.println("영어 점수 입력");
-					eng[i] = sc.nextInt();
-					System.out.println("수학 점수 입력");
-					math[i] = sc.nextInt();
-					total[i] = kor[i]+eng[i]+math[i];
-					avg[i] = total[i]/3; }//for 끝
+					for(int i=0; i<name.length; i++) {
+						System.out.println("이름 입력");
+						name[i] = sc.next();
+						System.out.println("번호 입력");
+						nums[i] = sc.nextInt();
+						System.out.println("국어 점수 입력");
+						kor[i] = sc.nextInt();
+						System.out.println("영어 점수 입력");
+						eng[i] = sc.nextInt();
+						System.out.println("수학 점수 입력");
+						math[i] = sc.nextInt();
+						total[i] = kor[i]+eng[i]+math[i];
+						avg[i] = total[i]/3; }//for 끝
 				System.out.println("입력 끝");
 			} else if(select==2) {
 				System.out.println("학생 정보 조회 출력");
@@ -76,32 +74,30 @@ public class Array_ex3 {
 						System.out.println(name[i]+"\t"+nums[i]+"\t"+total[i]+"\t"+avg[i]);
 					}
 					System.out.println("출력 끝");
+				} else {
+					System.out.println("학생 정보가 없습니다");
 				}
 			} else if(select==3) {
 				System.out.println("검색할 학생 번호 입력");
-				int b = sc.nextInt();
+				select = sc.nextInt();
 				boolean flag = false;
 				for(int i=0; i<name.length; i++) { 
-					if(b==nums[i]) {
-						System.out.println("이름: "+name[i]+" 번호: "+nums[i]+" 국어: "+kor[i]+" 영어: "+eng[i]+" 수학: "+math[i]+" 총점: "+total[i]+" 평균: "+avg[i]);
+					if(select==nums[i]) {
+						System.out.println("Name\tNum\tKor\tEng\tMath\tTotal\tAvg");
+						System.out.println(name[i]+"\t"+nums[i]+"\t"+kor[i]+"\t"+eng[i]+"\t"+math[i]+"\t"+total[i]+"\t"+avg[i]);
 					flag=!flag;
 					break;
-					} 
-				}
-				if(flag) {
-						System.out.println("해당 번호는 없는 번호입니다");
-						break;}
-						}
+					} }
+					if(flag==false) {
+						System.out.println("해당 학생 번호는 없는 번호입니다");
+						} 
+			
 				System.out.println("검색 출력 끝");
-				} else if(select==4) {
-					System.out.println("삭제할 학생 번호 입력");
-					boolean flag = true;
-					int b = sc.nextInt();
-					for(int i=0; i<name.length-1;i++) {
-					if(b==nums[i]) {
-						flag=!flag;
 						
-					}if(flag) {
+			} else if(select==4) {
+					System.out.println("삭제할 학생 번호 입력");
+					int b = sc.nextInt();
+					boolean flag = false;
 					String [] name2 = null;
 					int [] nums2 = null;
 					int [] kor2 = null;
@@ -109,28 +105,35 @@ public class Array_ex3 {
 					int [] math2 = null;
 					int [] total2 = null;
 					double [] avg2 = null;
+					int i = 0;
+					for(i=0; i<name.length; i++) {
+					if(b==nums[i]) {
+						flag=!flag;
+						break;						
+						}
+					}
+					if(flag) {
 					name2 = new String [name.length-1];
-					nums2 = new int [name.length-1];
-					kor2 = new int [name.length-1];
-					eng2 = new int [name.length-1];
-					math2 = new int [name.length-1];
-					total2 = new int [name.length-1];
-					avg2 = new double [name.length-1];}
-					else {
-						int index=0;
-					for(int j=0; j<name2.length; j++) {
+					nums2 = new int [name2.length];
+					kor2 = new int [name2.length];
+					eng2 = new int [name2.length];
+					math2 = new int [name2.length];
+					total2 = new int [name2.length];
+					avg2 = new double [name2.length];
+					int index=0;
+					for(int j=0; j<name.length; j++) {
 						if(j==i) {
 							index--;
 							continue;
 						}
-						name2[i] = name[i];
-						nums2[i] = nums[i];
-						kor2[i] = kor[i];
-						eng2[i] = eng[i];
-						math2[i] = math[i];
-						total2[i] = total[i];
-						avg2[i] = avg[i];
-						
+						name2[index] = name[j];
+						nums2[index] = nums[j];
+						kor2[index] = kor[j];
+						eng2[index] = eng[j];
+						math2[index] = math[j];
+						total2[index] = total[j];
+						avg2[index] = avg[j];
+					}
 						name=name2;
 						nums=nums2;
 						kor=kor2;
@@ -138,39 +141,60 @@ public class Array_ex3 {
 						math=math2;
 						total=total2;
 						avg=avg2;
-					
-					
-				} else if(select==5) {
+									
+				} else {
+						System.out.println("해당 학생 번호는 없는 번호입니다");
+				}
+					System.out.println("학생 삭제 끝");
+		}	else if(select==5) {
 					String [] name2 = new String[name.length+1];
-					int [] nums2 = new int [name.length+1];
-					int [] kor2 = new int[name.length+1];
-					int [] eng2 = new int [name.length+1];
-					int [] math2 = new int [name.length+1];
-					int [] total2 = new int [name.length+1];
-					double [] avg2 = new double [name.length+1];
+					int [] nums2 = new int [name2.length];
+					int [] kor2 = new int[name2.length];
+					int [] eng2 = new int [name2.length];
+					int [] math2 = new int [name2.length];
+					int [] total2 = new int [name2.length];
+					double [] avg2 = new double [name2.length];
 					
+					for(int i=0; i<name.length; i++) {
+						name2[i] = name[i];
+						nums2[i] = nums[i];
+						kor2[i] = kor[i];
+						eng2[i] = eng[i];
+						math2[i] = math[i];
+						total2[i] = total[i];
+						avg2[i] = avg[i];
+				}
 					System.out.println("이름 입력");
-					name2[i] = sc.next();
+					name2[name.length] = sc.next();
 					System.out.println("번호 입력");
-					nums2[i] = sc.nextInt();
+					nums2[name.length] = sc.nextInt();
 					System.out.println("국어 점수 입력");
-					kor2[i] = sc.nextInt();
+					kor2[name.length] = sc.nextInt();
 					System.out.println("영어 점수 입력");
-					eng2[i] = sc.nextInt();
+					eng2[name.length] = sc.nextInt();
 					System.out.println("수학 점수 입력");
-					math2[i] = sc.nextInt();
-					total2[i] = kor2[i]+eng2[i]+math2[i];
-					avg2[i] = total2[i]/3;
-				}
-			else if(select==6) {
+					math2[name.length] = sc.nextInt();
+					total2[name.length] = kor2[name.length]+eng2[name.length]+math2[name.length];
+					avg2[name.length] = total2[name.length]/3;
+					
+					name=name2;
+					nums=nums2;
+					kor=kor2;
+					eng=eng2;
+					math=math2;
+					total=total2;
+					avg=avg2;
+					System.out.println("학생 추가 끝");}
+					else {
+							break;}
+					
+		} //while 끝	
 				System.out.println("프로그램 종료");
-//				break;
-				check=!check;
-			} 
-				}
+
+			 
+				
 						
 			
-			} //while 끝	
 		
 		
 		}
