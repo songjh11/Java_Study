@@ -123,7 +123,6 @@ public class Array_ex3 {
 					int index=0;
 					for(int j=0; j<name.length; j++) {
 						if(j==i) {
-							index--;
 							continue;
 						}
 						name2[index] = name[j];
@@ -133,6 +132,8 @@ public class Array_ex3 {
 						math2[index] = math[j];
 						total2[index] = total[j];
 						avg2[index] = avg[j];
+						
+//						index++;
 					}
 						name=name2;
 						nums=nums2;
@@ -146,6 +147,7 @@ public class Array_ex3 {
 						System.out.println("해당 학생 번호는 없는 번호입니다");
 				}
 					System.out.println("학생 삭제 끝");
+					
 		}	else if(select==5) {
 					String [] name2 = new String[name.length+1];
 					int [] nums2 = new int [name2.length];
@@ -191,12 +193,6 @@ public class Array_ex3 {
 		} //while 끝	
 				System.out.println("프로그램 종료");
 
-			 
-				
-						
-			
-		
-		
-		}
-		}
+	}
+}
 
