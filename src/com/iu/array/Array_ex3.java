@@ -133,7 +133,7 @@ public class Array_ex3 {
 						total2[index] = total[j];
 						avg2[index] = avg[j];
 						
-//						index++;
+						index++;
 					}
 						name=name2;
 						nums=nums2;
